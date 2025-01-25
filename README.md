@@ -1,43 +1,48 @@
-Containerized Portfolio Website with Docker and CI/CD Pipeline
-This repository contains a simple web application containerized using Docker. It also integrates a CI/CD pipeline with GitHub Actions to automate the deployment process.
+# Raheem Portfolio Website - Containerized with Docker and CI/CD Pipeline
+This repository contains a portfolio website that is containerized using Docker. It also integrates a Continuous Integration/Continuous Deployment (CI/CD) pipeline with GitHub Actions to automate the deployment process.
 
-This project demonstrates how to:
+# Project Overview
+This project demonstrates the following:
 
-Create a simple web application.
-Containerize the application using Docker.
-Set up a GitHub Actions CI/CD pipeline for automated deployment.
+Creating a simple portfolio website.
+Containerizing the website using Docker.
+Setting up a GitHub Actions CI/CD pipeline for automated build and deployment.
 Prerequisites
+Before running the application locally or contributing to this project, make sure you have the following installed:
 
-Before running the application, ensure you have the following installed:
+# Docker: 
+For containerizing the application.
+# Git: 
+To clone the repository and manage version control.
+# GitHub Account: 
+To clone and push changes to the repository.
+# Optional: 
+Kubernetes for orchestration if the application needs to be scaled.
 
-Docker
-Git
-A GitHub account (to clone and push the repository)
-[Optional] Kubernetes (for orchestration in case of scaling the application)
-Steps to Run the Application Locally
-Clone this repository:
+# Steps to Run the Application Locally
+Clone the repository:
 
 bash
 Copy
 Edit
-git clone https://github.com/your-username/containerized-web-app.git
-cd containerized-web-app
+git clone https://github.com/RockieRaheem/Raheem-Portfolio-Website.git
+cd Raheem-Portfolio-Website
 Build the Docker image:
 
 bash
 Copy
 Edit
-docker build -t my-web-app .
+docker build -t raheem-portfolio-website .
 Run the Docker container:
 
 bash
 Copy
 Edit
-docker run -p 8080:8080 my-web-app
-Open a browser and navigate to http://localhost:8080 to view the application.
+docker run -p 8080:8080 raheem-portfolio-website
+View the application: Open a browser and go to http://localhost:8080 to view the portfolio website.
 
-Dockerization
-In this project, the application is packaged into a Docker container. Below is the content of the Dockerfile that defines the containerization process:
+# Dockerization
+In this project, the web application is containerized using Docker. The Dockerfile defines the containerization process. Here’s the content of the Dockerfile:
 
 Dockerfile
 Copy
@@ -61,33 +66,51 @@ EXPOSE 8080
 # Command to run the application
 CMD ["npm", "start"]
 CI/CD Pipeline with GitHub Actions
-This project uses GitHub Actions to set up a CI/CD pipeline. The GitHub Actions workflow is defined in the .github/workflows/ci-cd.yml file. The pipeline automates:
+The project uses GitHub Actions to set up a CI/CD pipeline, defined in the .github/workflows/ci-cd.yml file. The pipeline automates the following:
 
-Running tests (if any).
+# Running tests (if any).
 Building the Docker image.
 Deploying the container (this can be to any cloud provider or server).
-Folder Structure
+
+# Folder Structure
+Here’s an overview of the folder structure:
+
 graphql
 Copy
 Edit
-containerized-web-app/
+Raheem-Portfolio-Website/
 │
-├── .github/
-│   └── workflows/
-│       └── ci-cd.yml        # GitHub Actions workflow file
-├── src/
-│   └── app.js               # Source code of the web application
-├── Dockerfile               # Dockerfile for containerization
-├── package.json             # NPM dependencies
+├── .git/                    # Git version control
+├── .github/                 # GitHub Actions workflows
+│   └── workflows/           # CI/CD workflow file
+│       └── ci-cd.yml
+├── images/                  # Folder for images 
+├── src/                     # Source files
+│   └── index.html           # The HTML for the portfolio website
+│   └── script.js            # JavaScript for dynamic behavior
+│   └── style.css            # CSS for styling
+├── Dockerfile               # Dockerfile for containerizing the web app
 ├── README.md                # Project documentation
-└── .gitignore               # Files to ignore for Git
-Contributing
-If you would like to contribute to this project:
+└── .gitignore               # Git ignore file
+
+# Contributing
+If you’d like to contribute to this project:
 
 Fork the repository.
-Create a new branch (git checkout -b feature-branch).
+Create a new branch:
+bash
+Copy
+Edit
+git checkout -b feature-branch
 Make your changes.
-Commit your changes (git commit -am 'Add new feature').
-Push to your branch (git push origin feature-branch).
+Commit your changes:
+bash
+Copy
+Edit
+git commit -am 'Add new feature'
+Push to your branch:
+bash
+Copy
+Edit
+git push origin feature-branch
 Create a pull request.
-
