@@ -7,7 +7,7 @@ This project demonstrates the following:
 Creating a simple portfolio website.
 Containerizing the website using Docker.
 Setting up a GitHub Actions CI/CD pipeline for automated build and deployment.
-Prerequisites
+# Prerequisites
 Before running the application locally or contributing to this project, make sure you have the following installed:
 
 # Docker: 
@@ -91,7 +91,7 @@ Raheem-Portfolio-Website/
 │   └── style.css            # CSS for styling
 ├── Dockerfile               # Dockerfile for containerizing the web app
 ├── README.md                # Project documentation
-└── .gitignore               # Git ignore file
+
 
 # Contributing
 If you’d like to contribute to this project:
